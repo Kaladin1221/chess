@@ -1,12 +1,12 @@
 package chess;
 import java.util.HashSet;
-public class RookMoveSet
+public class BishopMoveSet
 {
     private ChessBoard board;
     private ChessPosition currentPosition;
     private ChessGame.TeamColor color;
 
-    public RookMoveSet(ChessBoard board, ChessPosition currentPosition)
+    public BishopMoveSet(ChessBoard board, ChessPosition currentPosition)
     {
         this.board = board;
         this.currentPosition = currentPosition;
@@ -25,9 +25,9 @@ public class RookMoveSet
         int currentCol = currentPosition.getColumn();
         ChessGame.TeamColor color = board.getColorOfSquare(currentPosition);
 
-        for (int i = currentRow + 1; i <= 8; i++)
+        for (int i =1 ; currentRow + i <= 8 && currentCol + i <= 8;  i++)
         {
-            ChessPosition checkPosition = new ChessPosition(i,currentCol);
+            ChessPosition checkPosition = new ChessPosition(currentRow + i,currentCol + i);
             if (board.getPiece(checkPosition) == null)
             {
                 possibleMoves.add(new ChessMove(currentPosition,checkPosition,null));
@@ -48,9 +48,9 @@ public class RookMoveSet
 
         }
 
-        for (int i = currentRow - 1; i >= 1; i--)
+        for (int i = 1; currentRow - i >= 1 && currentCol - i >= 1; i++)
         {
-            ChessPosition checkPosition = new ChessPosition(i,currentCol);
+            ChessPosition checkPosition = new ChessPosition(currentRow - i, currentCol - i);
             if (board.getPiece(checkPosition) == null)
             {
                 possibleMoves.add(new ChessMove(currentPosition,checkPosition,null));
@@ -71,9 +71,9 @@ public class RookMoveSet
 
         }
 
-        for (int i = currentCol + 1; i <= 8; i++)
+        for (int i = 1; currentRow - i >= 1 && currentCol + i <= 8; i++)
         {
-            ChessPosition checkPosition = new ChessPosition(currentRow,i);
+            ChessPosition checkPosition = new ChessPosition(currentRow - i, currentCol + i);
             if (board.getPiece(checkPosition) == null)
             {
                 possibleMoves.add(new ChessMove(currentPosition,checkPosition,null));
@@ -94,9 +94,9 @@ public class RookMoveSet
 
         }
 
-        for (int i = currentCol -1; i >= 1; i--)
+        for (int i = 1; currentRow + i <= 8 && currentCol - i >= 1; i++)
         {
-            ChessPosition checkPosition = new ChessPosition(currentRow,i);
+            ChessPosition checkPosition = new ChessPosition(currentRow + i, currentCol - i);
             if (board.getPiece(checkPosition) == null)
             {
                 possibleMoves.add(new ChessMove(currentPosition,checkPosition,null));
@@ -122,3 +122,4 @@ public class RookMoveSet
 
 
 }
+

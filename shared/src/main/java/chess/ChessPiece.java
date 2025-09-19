@@ -57,7 +57,14 @@ public class ChessPiece
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition)
     {
-        throw new RuntimeException("Not implemented");
+        if (type == PieceType.ROOK)
+        {
+            return RookMoveSet.getPossibleMoves(board, myPosition);
+        }
+        else
+        {
+            throw new RuntimeException("Not implemented");
+        }
     }
 
 
