@@ -36,7 +36,7 @@ public class ChessPosition
     {
         return col;
     }
-
+// override toString, equals and hashcode operators
     @Override
     public String toString() {
         return "ChessPosition{" +
