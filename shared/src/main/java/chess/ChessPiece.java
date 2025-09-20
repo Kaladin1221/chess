@@ -61,6 +61,10 @@ public class ChessPiece
         {
             return RookMoveSet.getPossibleMoves(board, myPosition);
         }
+        if (type == PieceType.PAWN)
+        {
+            return PawnMoveSet.getPossibleMoves(board, myPosition);
+        }
         if (type == PieceType.KNIGHT)
         {
             return KnightMoveSet.getPossibleMoves(board, myPosition);
