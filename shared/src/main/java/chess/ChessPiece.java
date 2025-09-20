@@ -61,6 +61,20 @@ public class ChessPiece
         {
             return RookMoveSet.getPossibleMoves(board, myPosition);
         }
+        if (type == PieceType.KNIGHT)
+        {
+            return KnightMoveSet.getPossibleMoves(board, myPosition);
+        }
+        if (type == PieceType.BISHOP)
+        {
+            return BishopMoveSet.getPossibleMoves(board, myPosition);
+        }
+        if (type == PieceType.QUEEN)
+        {
+            return QueenMoveSet.getPossibleMoves(board, myPosition);
+        }
+
+
         else
         {
             throw new RuntimeException("Not implemented");
