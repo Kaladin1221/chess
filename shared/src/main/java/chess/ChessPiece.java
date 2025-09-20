@@ -73,12 +73,13 @@ public class ChessPiece
         {
             return QueenMoveSet.getPossibleMoves(board, myPosition);
         }
-
-
         else
         {
-            throw new RuntimeException("Not implemented");
+            return KingMoveSet.getPossibleMoves(board, myPosition);
         }
+
+
+
     }
 
 

@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-public class ChessPieceTests extends EqualsTestingUtility<ChessPiece> {
+public class  ChessPieceTests extends EqualsTestingUtility<ChessPiece> {
     public ChessPieceTests() {
         super("ChessPiece", "pieces");
     }
