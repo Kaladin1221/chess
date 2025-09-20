@@ -13,10 +13,7 @@ public class RookMoveSet
         this.color = board.getColorOfSquare(currentPosition);
     }
 
-    //static boolean isSquareOnBoard(ChessPosition position)
-    //{
-    //    return (position.getRow() >= 1 && position.getRow()<=8 && position.getColumn() >= 1 && position.getColumn() <= 8);
-    //}
+
 
     public static HashSet<ChessMove> getPossibleMoves(ChessBoard board,ChessPosition currentPosition)
     {
