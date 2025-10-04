@@ -131,8 +131,8 @@ public class PawnMoveSet {
         else if (color == ChessGame.TeamColor.WHITE && currentRow == 2)
         {
             HashSet<ChessMove> standardMoves = frontLeftRight(board, currentPosition);
-            if (!standardMoves.isEmpty())
-            {
+
+
                 for (ChessMove each : standardMoves)
                 {
                     possibleMoves.add(new ChessMove(currentPosition, each.getEndPosition(), null));
@@ -143,14 +143,14 @@ public class PawnMoveSet {
                 {
                     possibleMoves.add(new ChessMove(currentPosition, checkPosition2, null));
                 }
-            }
+
         }
 
         else if (color == ChessGame.TeamColor.BLACK && currentRow == 7)
         {
             HashSet<ChessMove> standardMoves = frontLeftRight(board, currentPosition);
-            if (!standardMoves.isEmpty())
-            {
+
+
                 for (ChessMove each : standardMoves)
                 {
                     possibleMoves.add(new ChessMove(currentPosition, each.getEndPosition(), null));
@@ -161,7 +161,7 @@ public class PawnMoveSet {
                 {
                     possibleMoves.add(new ChessMove(currentPosition, checkPosition2, null));
                 }
-            }
+
         }
 
         else
