@@ -20,7 +20,7 @@ public class ChessGame
     public ChessGame()
     {
         board = new ChessBoard();
-        board.resetBoard();
+        board.resetBoard(); // this sets the board up for the first time
         setTeamTurn(TeamColor.WHITE);
     }
 
