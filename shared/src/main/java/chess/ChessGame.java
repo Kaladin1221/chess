@@ -214,9 +214,9 @@ public class ChessGame
     public boolean isInStalemate(TeamColor teamColor)
     {
 
-        if (isInCheck(teamColor))
+        if (isInCheck(teamColor)) // make sure we are not in check
         {
-            return false;    
+            return false;
         }
         for (int x = 1; x <= 8; x++)
         {
